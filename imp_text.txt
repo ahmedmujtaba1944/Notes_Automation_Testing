@@ -1,0 +1,482 @@
+
+web elements are the components on the website like fields, links, imgs, etc.. 
+locators 
+locatores are use to locate( identify)  the elements on the website. 
+
+types of locators 8 
+( single element)
+1. ID
+2. Name
+3. LinkText
+4. Partial LinkText 
+(group of elements) 
+5. ClassName
+6. TagName 
+7.CSS Selector
+- Tag and ID
+- Tag and ClassName
+- Tag and Attributes
+- Tag ClassName and Attributes
+8. Xpath
+- absolute Xpath
+- relative Xpath
+
+---- Important----
+Q1: linktext vs partial linktext
+LinkText: it returns elements with an exact match of the given text
+PartialLinkText returns elements which include the given text
+ie: target text is "tablets"
+ans use use "tab" but if the web page also having the "tables" so its create the conflict thats why we always prefer the linktext. 
+
+Q2:FindElement( return single element) VS FindElements( return List of elements) 
+Scanario1: Locator matching single web element
+findElement:return single webelement
+findElements:return single webelemtn in the form of list <WebElemnt>
+Scanario2: Locator matching multiple web elements
+findElement: first matching single webelement
+findElements: multiple webelements
+Scanario3: Locator is not matching 
+findElement:no such element exception
+findElements: return 0 list <Webelements> but its emply list.
+
+
+Q3: difference between absolute xpath and relative xpath
+1. 
+absolute xpath start with / ( represent the root node)
+relative xpath start with //
+2. 
+absolute xpaht do not use attributes ( only tags)
+relative xpath works with attributes
+3. 
+absolute xpath traverse through each node till it finds element
+relative xapth directly jump and find the element by using attribute
+
+
+single
+//input[@name="username"]
+//*[@name="username"]
+multiple
+//input[@name="username"][@placeholder="enter name"]
+or
+and
+type()
+contain()
+starts-with()
+
+xpath axes
+self
+parent
+child
+ancestor
+descendent
+following
+preceding
+following-sibling
+preceding-sibling
+
+
+1) Get Methods
+2) Conditional methods
+3) Browser methods
+4) navigational methods 
+5) wait methods
+
+get methods - we can access these methods through webdriver instance 
+
+get(url) - open the url on the browser
+getTitle() - returns title of the page
+getCurrentUrl() - return the url of the page
+getPageSourse() - return sourse code of the page
+getWindowHandle() - retrun ID of the single Browser window
+getWindowHandles() - return ID's of the multiple browser windows
+
+
+- Configs
+  - activeEnvironment.json
+  - configs.json
+- PageObjects
+  - loginObj.js
+- Pages
+  - LoginPage.js
+- Tests
+  - LoginTest.spec.js
+- TestData
+  - loginData.js
+- Utils
+  - Helper.js
+
+
+
+demo_sites
+https://demowebshop.tricentis.com/
+https://opensource-demo.orangehrmlive.com/web/index.php/auth/login
+https://www.saucedemo.com/
+https://the-internet.herokuapp.com/
+https://www.demoblaze.com/
+https://demo.opencart.com/
+https://www.nopcommerce.com/en/demo
+
+
+Selenium with java playlist
+https://www.youtube.com/@RahulKamat-dv2xs/playlists
+
+
+• Curiosity, critical thinking, and a drive to continuously improve your craft.
+• An eye for detail and empathy for users.
+• The ability to ask the right questions at the right time.
+• Be able to share your testing story and about the state of the product to the stakeholders and those concerned effectively and influentially.
+
+mongodb username and password.
+am2024qab2
+iNclUk2SmvsbegHw
+
+
+Dear Testers,
+If you are planning to take the ISTQB Certified Tester Foundation Level (CTFL) exam, I want to share some valuable tips to help you prepare effectively.
+Step 1 : Cover the Syllabus Point by Point 📘
+Start by thoroughly understanding the syllabus. Go through each point and make sure you understand it completely. You can download the official ISTQB syllabus (v4.0) here.
+Download the ISTQB Syllabus : https://lnkd.in/dnJVSFfH
+Step 2: Prepare Mock Questions for Each Chapter 📝
+For each chapter, practice with mock questions to test your understanding. You can find helpful mock tests on this site.
+ISTQB Mock Tests: https://lnkd.in/dmmXWQ-Y
+Step 3: Watch YouTube Videos for Each Chapter 📺
+Once you've completed the chapters, check out this YouTube channel that offers detailed videos on each chapter to further solidify your knowledge.
+YouTube Channel for ISTQB Preparation : https://lnkd.in/dPe79MFc
+Step 4: Solve Mock Papers 📝
+Finally, make sure to solve the mock papers provided on the ISTQB website to get an idea of the real exam format and improve your time management. You can find the mock papers here.
+ISTQB Mock Papers : https://lnkd.in/dnJVSFfH
+
+
+
+Introduction:  
+Summarize yourself [Y] 
+Your experience and tech domain [Y] 
+ 
+General QA practices:  
+What is Agile?  
+What is Kanban?  
+What is the standard sprint time?  
+Do you follow scrums and if so, how much is the duration of scrum calls? 
+ 
+Quality Assurance:  
+Explain regression testing [] 
+Explain retesting [] 
+Explain sanity testing [] 
+Explain smoke testing  
+Explain BVT (boundry value analysis) 
+Explain compatibility testing [] 
+ 
+Issue and trouble shooting: 
+  a. identify the problem in code. [] 
+ 
+Maven: 
+What is maven? And what is the purpose of using maven?  
+What is the difference between JDK and JRE and why we use JDK?  
+How can we achieve consistency through out the project while there are multiple automation engineers working on a same or different modules? Like how we can guarantee that each of engineer is having the same libraries and configurations used inside the automation framework? 
+ 
+Automation: 
+What is testNG framework? And why it is more efficient than your normal automation framework? What advantage does it offers? 
+How can we set the ordering over our test cases to be executed in a particular manner in testNG HINT: priority  
+Have you worked on cucumber BDD framework, if so what it is and why we actually use it if we already have testNG and other automation frameworks  
+What is a feature file and whats the purpose of it? How many test cases we can define inside a feature file  
+What is the extension of feature file and why we use that extension inside our framework 
+What are different types of element locators?  
+Explain difference between relative and absolute xpath?  
+If there is a condition that you can directly not able to locate an element but it is present inside the DOM, how can you do that? HINT: siblings  
+Write me the xpath for the following  
+Class=Selenium 
+Id=Selenium Webdriver 
+Text contains Selenium Webdriver 
+What are different types of waits we can use during our script execution? What is more suggested and what is the main difference between them? HINT: fluent/ implicit/ explicit  
+Exceptions  
+Iframe 
+React native 
+Appium: how to validate a click 
+ 
+Programming: 
+CODE:  
+Write me an algorithm for PALIMDROME 
+Write me a code for factorial using any of the programming language 
+Write me an algorithm to find out the second highest and highest number inside an unsorted array {10, 13, 5, 0, 78, 3} HINT: use bubble sort 
+Reverse all words at same position inside a provided string {I am human} Answer: {I ma namuh} 
+ 
+CONCEPTS: 
+Define OOPs in a manner than a naïve level engineer can understand it without having a handsome knowledge of it? 
+What are constructors and what are the types of it and when to use the specific type? HINT: default and super 
+Define try catch and what happens when you use a finally block inside your code 
+ 
+Database: 
+CONCEPTS: 
+Can you define what is cardinality in a query and when exactly we look into it? 
+Do you know what is COMMON TABLE EXPRESSIONS CTE? 
+Explain different types of table joins?  
+What is the differences between LEFT JOIN and a RIGHT JOIN 
+PRACTICAL: 
+Write me the query of the following scenarios: 
+Print out system date using a select query 
+Self join 
+ 
+SELECT e.employee_name, m.employee_name AS employee_manager  
+FROM   [employees] e 
+JOIN   [employees] m on e.employee_manager = m.ID; 
+ 
+ 
+API: 
+CONCEPTS: 
+200 vs 201 response code 
+GET in a POST call 
+500 UI error 
+What are the types of webservices? Explain in a manner so that a naïve person can understand or least gain some useful information from your words? 
+What is the difference between SOAP and REST APIs? 
+What is the composition of a SOAP API call? 
+What is the composition of REST API call? 
+Explain difference between  
+GET  
+PUT  
+POST  
+PATCH  
+DELETE 
+There is a wrong terminology between POST and PATCH, why? And why it is important to use the correct architecture? 
+API testing is what type of testing? What areas we can cover using API testing itself?If we can test an application using  API only, just to verify or validate the data which is coming by, then why we do testing on AUT using the UI/ UX? 
+ 
+JMETER/ PERFORMANCE TESTING: 
+CONCEPTS:  
+What type of testing is performance testing? HINT: non functional 
+Explain load/ stress and volume testing and what are the key differences between them? 
+Provided a scenario, is this can be termed as a volume testing? 
+ 
+PRACTICAL: 
+How you can bench mark a performance test? 
+What is your strategy while evaluating a system for performance testing? 
+Define Thread group inside JMETER 
+What is a test plan  
+What are listners and samplers? What type of samplers we use when testing DB connection? 
+Define ramp up time  
+What we can do to validate the responses at different instances of script execution 
+Login request: user name password request -> sabkay header me token jata ha wo kaisay karega 
+
+
+
+1️⃣ Learn the Basics: Understand SDLC, STLC, test cases, and defect lifecycle.
+2️⃣ Hands-On Practice: Write test cases for apps, explore testing platforms like Test.io.
+3️⃣ Master Tools: Familiarize yourself with Selenium, Postman, JIRA, or Git.
+4️⃣ Programming Skills: Learn basics of Python, Java, or JavaScript to debug and automate.
+5️⃣ Build a Portfolio: Showcase your work on GitHub or create test reports for sample projects.
+6️⃣ Network: Connect with QA professionals, join communities, and seek mentorship.
+7️⃣ Ace Interviews: Prepare for testing scenarios, defect analysis, and coding basics if needed.
+
+
+1. Write a Java program for the largest number from three number
+2. What is SDLC and STLC? And Explain its phases.
+3. Define your roles and responsibilities.
+4. What is regression testing?
+5. What are the different methodologies of SDLC? Explain each.
+6. Define Agile?
+7. Define Scrum And Sprint?
+8. What is the estimation in Sprint?
+9. What is sprint backlog?
+10. What are the different reports in Testing?
+11. What are the key components of the TestCase report?
+12. What are the components of a defect report?
+13. What is Jira?
+14. How do you log defects in Jira?
+15. How do you link bugs with the user story?
+16. What is sprint?
+17. Define black box and white box testing,
+18. Define functional testing.
+19. Define the oops concept in Java.
+20. Give me examples of oops which you used in your framework.
+21. What is TestNG
+22. What is usability testing?
+23. What are the steps for reporting the defect in Jira?
+24. Define the Structure of Selenium.
+25. How will you handle the dropdown in selenium?
+26. Different types of wait in selenium? Could you explain each of them? 
+27. What is the difference between hard and soft assertion?
+28. Why are we using "WebDriver driver = new ChromeDrive ()"? 
+Why can't we write RemoteDriver driver = new ChromeDrive();
+29. Explain the different Annotations in TestNG.
+30. Define the Priority and Severity of the Bug.
+31. How do you maximize the screen in Selenium?
+32. What are the different closure reports?
+33. What is the difference between a Test Plan and a Test Strategy document?
+34. Define the Bug lifecycle of JIRA.
+
+🚀 Seeking Remote Opportunities! 🚀
+Hello, LinkedIn network! 👋
+I’m Sana Zafar, a skilled SQA Engineer with expertise in Manual & Automation Testing. I’m currently on the lookout for remote job opportunities where I can contribute to delivering high-quality software solutions.
+🔹 What I bring to the table:
+Manual Testing (Web, Mobile, APIs)
+Automation Testing (Selenium, Cypress, Playwright)
+Web API Testing (Postman)
+Performance & Load Testing (JMeter)
+Regression & Functional Testing
+Bug Tracking & Test Case Management (Jira, ClickUp, Qase)
+Deep Link Testing & Batch Testing
+Exploratory Testing for mobile & web apps
+If you or anyone in your network is looking for a dedicated SQA Engineer, please feel free to refer me or share my post! Let’s connect and ensure software quality together. 🙌
+Thank you for your support!
+
+
+🔴 Bug Severity
+🔹 Defines how serious the defect is in terms of system impact.
+🔹 Categorized as Critical, High, Medium, Low.
+🔹 Determined by QA/Testers.
+🔹 Example: A login page crash is a Critical Severity issue because it blocks users from accessing the system.
+🟢 Bug Priority
+🔹 Defines how soon the defect should be fixed.
+🔹 Categorized as High, Medium, Low.
+🔹 Determined by Developers & Product Teams.
+🔹 Example: A typo in the footer of the homepage is a Low Priority issue because it doesn’t impact functionality.
+🛠️ Key Differences:
+✅ High Severity, High Priority → App crashes on launch. 
+✅ High Severity, Low Priority → A critical issue in a rarely used feature. 
+✅ Low Severity, High Priority → A small UI glitch on the homepage of a live website. 
+✅ Low Severity, Low Priority → A minor alignment issue in an admin panel.
+
+
+𝗪𝗲𝗲𝗸 𝟭: Manual Testing 
+make documents write answer of all question ( gitrepo, pdf, other notes)
+• What is QA & QC & Testing.
+• Functional and non-functional testing along with their types.
+• SDLC & STLC
+• Project management tools.
+• Test Cases.
+• Bug Reporting.
+• Etc.
+solve problems plus write on pages (notes) 
+Reveice all oop concept and do practice.
+𝗪𝗲𝗲𝗸 𝟮: Database Testing 
+apni college video plus pracice
+1 ahmad hassan course
+write most asked db questions query
+• GUI Testing vs DB Testing.
+• Database test case types and test case writing.
+• What is DML?
+• Writing queries Specific to test cases.
+• Database Table, Column Testing, Complex queries.
+• Aggregate Functions.
+• Keys testing.
+• What is store procedure testing?
+ 
+𝗪𝗲𝗲𝗸 𝟯: API Testing
+1 course from linkedin
+1 course of ahmed hassan
+make proper notes 
+write api interview questions
+ 
+• Diff b/w REST and SOAP 
+• What are endpoints
+• How to set local and global Variables
+• API Authorization
+• Collection runner
+• Data-driven testing, 
+• Newman
+• How to check logs
+ 
+𝗪𝗲𝗲𝗸 𝟰: Performance Testing 
+1 course of sir ramzan
+1 course of ahmad hassan 
+1 youtube video of zeeshan asghar
+make notes interview questions
+ 
+• Basics of performance testing.
+• JMeter components like samplers, config elements, listeners, Assertions, etc.
+• Reading Data from CSV files using CSV config element.
+• How to create and record scripts using Blazemeter.
+ 
+𝗪𝗲𝗲𝗸 5: WEB Automation Testing
+start notes making from start 
+complete the playlist of sdet
+ 
+• What is automation and why do we need automation?
+• Basic Programming concepts.
+• How to configure web driver with browsers.
+• Selenium web driver &their components & element locators.
+• How to configure the TestNG framework for execution, reporting, and annotations.
+• How to perform End-to-end testing of live projects.
+ 
+𝗪𝗲𝗲𝗸 6: Mobile Automation Testing
+ 
+• What is mobile automation & do we need automation?
+• Connecting Virtual Machines for Testing.
+• How to configure the testing framework for execution & reporting.
+• How to use assertions in automation.
+• How to set up Jenkins for mobile automation & execution of tests in Jenkins.
+• Appium mobile automation (Android & IOS)
+ 
+𝗪𝗲𝗲𝗸 7: Security Testing 
+1 course of ahmad hassan
+• Importance of Security Testing.
+• Vulnerabilities.
+• Security Testing Tools.
+• Web Application Security Testing - Live Project
+• Reporting.
+ 
+✅ Automation Testing (Selenium, Playwright, BDD) – Covers both web and modern frontend testing.
+✅ Performance Testing (JMeter, LoadRunner) – Strong for enterprise-level load testing.
+✅ API Testing (Postman, RestAssured, GraphQL) – Comprehensive coverage for API validation.
+✅ CI/CD & DevOps (GitLab, Docker, Kubernetes, Terraform) – Ideal for modern automation pipelines.
+✅ AI Testing (Testim) – Future-proofing for AI-driven automation.
+✅ Test Case Management (Zephyr) – Essential for structured QA processes.
+
+
+
+Here’s a structured set of interview questions to evaluate a Software Quality Assurance (SQA) Engineer with 3 years of experience. These questions will help assess their ability to find issues effectively, communicate with developers, and ensure resolutions.
+1. General Testing Knowledge
+What are the different types of software testing, and when would you use each?
+Explain the difference between functional and non-functional testing. Can you give examples of each?
+How do you decide what to test and how to prioritize test cases?
+What is risk-based testing, and how do you apply it in real-world projects?
+2. Bug Identification & Reporting
+How do you ensure that you identify the most critical bugs in an application?
+What tools do you use for bug tracking? Have you worked with Jira, Trello, or any other issue-tracking tool?
+Can you walk me through a real bug you found, how you documented it, and how you ensured it was fixed?
+How do you handle a situation where a developer disagrees with your bug report?
+How do you prioritize and categorize bugs?
+3. Test Automation & Tools
+Have you worked with automation testing? If so, what tools have you used (e.g., Selenium, Cypress, Playwright)?
+When would you recommend manual testing over automated testing?
+Have you written test scripts? If yes, can you explain a script you wrote and its purpose?
+What challenges have you faced while implementing test automation?
+4. Collaboration with Developers & Proactive Issue Resolution
+How do you proactively work with developers to ensure issues are fixed?
+Have you ever faced a situation where a developer delayed fixing a critical issue? How did you handle it?
+How do you communicate the impact of a defect to a non-technical stakeholder?
+How do you ensure that once a bug is marked as fixed, it is actually resolved and not reoccurring?
+Have you ever suggested process improvements to the development team? What was the outcome?
+5. Performance & Security Testing
+Have you conducted performance testing? What tools have you used?
+What are common security vulnerabilities in web applications? How would you test for them?
+6. Real-world Scenarios
+Suppose you are testing a login page, and you find a bug where the login fails for certain users but works fine for others. How do you debug and report this?
+If you were given a feature with no clear requirements, how would you test it?
+How would you handle a tight deadline where you don’t have time to test everything?
+Would you like me to tailor these questions further based on a specific domain (e.g., mobile apps, web apps, APIs)?
+
+
+
+
+Automation Development:
+Design, develop, and maintain automated testing frameworks using BDD/Cucumber, Java, and other tools for robust and scalable test coverage.
+ 
+API Automation:
+Design and implement API automation frameworks and scripts using tools like RestAssured.
+Validate API performance, functionality, and security by creating and executing detailed test cases.
+Debug and resolve issues in API services, collaborating closely with developers.
+ 
+UI-based Automation:
+Develop and maintain UI automation frameworks using tools like Selenium.
+Ensure seamless user interface functionality through robust end-to-end testing strategies.
+Automate repetitive UI tasks to improve testing efficiency and accuracy.
+ 
+Manual Testing:
+Perform exploratory, functional, and regression testing across web and mobile platforms.
+ 
+Defect Management:
+Document, track, and resolve issues identified during testing, collaborating closely with developers and stakeholders.
+ 
+General Responsibilities:
+Collaborate in Agile teams, participating in sprint ceremonies to align testing efforts with development cycles.
+Develop detailed test plans and test cases based on business and technical requirements.
+Stay updated on industry trends and best practices to continuously improve QA processes.

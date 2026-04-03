@@ -1,0 +1,216 @@
+What is automation testing ?
+when we do automation testing ?
+Why we need automation testing ?
+What is test automation framwork ?
+- A testing framwork is a set fo guidlines or rules used for creating and designing test cases.
+- A framwork is comprised of a combination of practices and tools that are designed to help QA professiaonls test more effiently.
+Types of Framwork ?
+- Linear Automation framework.
+--- Record-and-playback, the tester records each step such as navigation, user input, or checkpoints, and then plays the script back automatically to conduct the test.  Selenium IDE is the example.
+- Module Bases Testing Framework.
+--- Based on POM, The framwework divides the entire "Application Under Test" into a number of logical and isolated modules.
+- Data Driven Testing Framework
+--- file Readers, Data-Driven is a test automation framework which stores test data in a  table or spreadsheet format.
+- Hybrid framework is the combination of two or more frameworks. 
+
+Selenium Suits
+1. Selenium IDE
+- it is record and playback tool, which only supports only firefox. it does not allow conditional statements.
+2. Selenium RC Server ( selenium remote control server)
+- Selenium RC sends test to a server through which execution is performed.it does not interact with the browser directly due to which the execution of test is very slow.
+3. Selenium WebDriver
+- it interacts directly with the browser while executing the test. Execution is faster compare to RC.
+4. Selenium Grid
+- similar architecture as the selenium RS and it used to execute parallel test on multiple environments 
+
+
+Maven: Maven is a build automation tool that is used to manage the project dependency and the whole projec life cycle.
+Pom.xml: pom.xml contains projct information and configuration details used by the Maven build
+dependencies: Any library on which a java project is depend on, to run or build is called a dependency. Example: Selenium Jars
+
+Most Common functions:
+1. Find Element : webElement element = driver.findElement(By.linkText("read more)"));
+2. Click: element.click(); this method click on the select element.
+3. GetText: string txt = element.getText(); this method retrieve text of selected element as a String.
+4. send key: element.sendKeys("text"); this method send sequence of char or string to the selected element.
+5. Navigate To: driver.navigate().to.("url"); this method loads a new web page in the existing browser window.
+6. Navigate Forward: driver.nevigate().forward() this method enables the web browser to click on the forward button in the existing browser window.
+7. NavigateBack: driver.nevigate().back() this method enables the web browser to click on the back button in the existing browser window.
+8. Navigate Refresh: driver.navigate().refresh() this method refresh the page that currently open.
+9. Get: driver.get("url") this method laods a new web page in the existing browser window.
+10. Get Title: driver.getTitle() this method fetches the title of the current webpage and returns as string
+11. Get Current URL: driver.getCurrentUrl() this method fetches the string representing the Current URL of the current web page and returns as a String.
+12. Quit: driver.quit() this method terminates all windows operating by WebDriver.
+
+
+Locators 
+
+
+
+
+
+Selenium WebDriver
+- it allows you to execute cross-browser tests. 
+- it interacts with the broswer directly therefore test execution is fast. 
+- WebDriver Interface is the core of the Selenium WebDriver as it has all the required methods and respective nested interfaces defined within it, which 
+helps in simulating user actions inside the browser.
+
+
+
+
+#### Page Objet Model:
+- Page Object Model (POM) is a desing pattern, that creates Object Repository for Web UI element.
+- In Page Object model (POM) all Web Elements and the method that operate on these Web Elements are maintained inside a separate file and page class. A task like verification or assertion  should be separate as part of Test methods in a test class.
+- Due to this structure, we create functions bases on logical tasks that we may need to perform multiple types and use these functionals in different tests.
+- for example, we can create a function for login and use in a happy case with a login successful assertion and in  a negative case with a login failed assertion.
+- Using Page Object Model reduces redundancy in code and it also make test case maintenance very easy.
+
+
+#### Data Driven Framework
+- In data-driven, we separate test inputs in a seprate file and use a fiel reader to get
+- the data form that file into our scripts. this provide us with separate repository for data input or outputs. 
+
+#### TestNG
+- TestNG is an automation testing framework in which NG stands for "Next Generation" which uses the annotation(@)
+- Using TestNG, you can generate a proper report and you cna easily come to know how many test caes are passed, failed and skipped.
+- if Follows ATDD approach which stands for Acceptance Test Driven Development Approach.
+- it involves writing automated tests from the users perspective and is designed to assert and validate the functionality of the software being developed.
+
+#### @Test Annotation
+- @Test is used to tell that the method under it is a test case.
+- Since we use annotations in TestNG, we needed to import the packages org.testing.annotation.*
+- You may have multiple test cases( therefore, multiple @Test annotations) in a single TestNG file.
+
+#### common attributes
+- description: It is the description for the methods 
+ Eg: @Test(description = "test method")
+- Priority: This command sets the priority of the test methods.
+ Eg: @Test(priority  1)
+
+
+
+#### Assertions
+1. assertEquals
+Assert.assertEquals(actual, expected);
+Validates if the actual and expected values are the same or not.
+2. assertNotEquals
+Assert.assertNotEquals(actual,expected,Message);
+whenever the expected and actual values match, the assertion fails with an exception and marks the testcase as "failed".
+3. assertTrue
+Assert.assertTure(condion);
+This method asserts if the condition s true or not. if not, then the exception error is thrown.
+4. assertNotNull
+Assert.assertNotNull(object);
+Verifies that value returned by object is not null. it will be pass if returned.
+
+#### XML runner
+- XML runner allows user s to call  locators and different test class
+- using the XML runner, the automated test cases are executed
+- the report gets generated basesd on the results of the XML runner.
+
+
+//Runner.xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="SmokeSuite">
+    <test name="LoginclassTestCase">
+        <classes>
+            <class name="MyTestProject.Test.LoginTest"/>
+        </classes>
+    </test>
+</suite>
+
+##### Steps to run runner.xml
+1.Go to Edit Configuration
+2. Click on the add (+) to add new configuration
+3. Click on testNG
+4. Give name "Runner"
+5. select the "Suite" from the Test Kind dropdown.
+6. Select the file in the suite input field.
+7. Then click on apply and ok.
+
+#### TestNG Reporting
+- Once we execute test cases using TestNG, it will generate a default HTML report
+- Execute the testing.xml file and refresh the project.
+- Navigate to 'test-output' folder. Now you should find a report "examlable-report.html". this is the default report generated by TestNg.
+
+
+
+Steps
+1. open the edit configuration of Runner that you have created.
+2. go to listeners
+3. click on the use reporters
+3. click apply and ok.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Why do we need RemoteWebDriver class?
+- RemoteWebDriver class because it is a fully implemented WebDriver Interface class extended by every BrowserDriver class within the Selenium framework.
+RemoteWebdriver class implements the following interfaces:
+- WebDriver
+- JavaScriptExecutor
+- TakesScreenshot
+- HasVirtualAuthenticator
+- PrintsPage
+- HasCapabilities
+- Interactive
+
+(Except WebDriver, all other interfaces will be discussed in upcoming posts)
+
+What does Browser Drivers do?
+- Selenium provides drivers specific to each browser and without revealing the internal logic of browser functionality, the browser driver interacts with the respective browser by establishing a secure connection.
+- These browser drivers are also specific to the language which is used for test case automation like C#, Python, Java, etc.
+
+When a test script is executed with the help of WebDriver, the following tasks are performed in the background:
+
+1) An HTTP request is generated and it is delivered to the browser driver for every Selenium Command
+2) The HTTP request is received by the driver through an HTTP server
+3) All the steps/instructions to be executed on the browser is decided by an HTTP server
+4) The HTTP server then receives the execution status and in turn sends it back to the automation scripts
+
+4) Why do we use Chromium Driver Class?
+
+The ChromeDriver class in Selenium extends the ChromiumDriver class to facilitate shared functionality and code reuse among browsers based on the Chromium engine, such as Google Chrome and Microsoft Edge.
+
+5) What are important methods defined in WebDriver?
+
+ //To close the current browser instance
+driver.close();
+//To close all the open browser instances
+driver.quit();
+
+driver.get("https://google.com");
+driver.navigate().to("https://google.com");
+
+Action dragAndDrop = builder.clickAndHold(fromWebElement)
+ .moveToElement(toWebElement)
+ .release(toWebElement)
+ .build().perform();
+
+Basic actions:
+
+click(): Clicks on the element.
+sendKeys(String keys): Sends keyboard keys to the element.
+clear(): Clears the text input field of the element.
+
+Frame switching:
+switchTo().frame(WebElement frameLocator): Switches the focus to a specific frame within the page.
+
+Alert handling:
+switchTo().alert(): Switches focus to an alert or confirmation dialog.
+accept(), dismiss(), sendKeys(String text): Interact with the alert.
+
+
+
